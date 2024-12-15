@@ -1,0 +1,232 @@
+:root{
+    --color-1:#1E202B;
+    --color-2:#009AD8;
+    --color-3:#262936;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.bg-one{
+    background-color: var(--color-1);
+}
+.bg-second{
+    background-color: var(--color-3);
+}
+.bg-three{
+    background-color: var(--color-2);
+}
+.text-three{
+    color: var(--color-2);
+}
+@media (min-width: 1200px) { 
+    .px-100{
+        padding-right: 100px !important;
+        padding-left: 100px !important;
+    }   
+}
+.loader {
+    color: #FFF;
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    box-sizing: border-box;
+  }
+  .loader::before {
+    content: '';  
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    height: 28px;
+    width: 5.15px;
+    background: currentColor;
+    box-sizing: border-box;
+    animation: animloader1 1s linear infinite alternate;
+  }
+  .loader::after {
+    content: '';  
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 125px;
+    top: 2px;
+    border-radius: 50%;
+    background: var(--color-2);
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite alternate;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: translate(0px, 0px) scaleX(1);
+    }
+    14% {
+      transform: translate(-12px, -16px) scaleX(1.05);
+    }
+    28% {
+      transform: translate(-27px, -28px) scaleX(1.07);
+    }
+    42% {
+      transform: translate(-46px, -35px) scaleX(1.1);
+    }
+    57% {
+      transform: translate(-70px, -37px) scaleX(1.1);
+    }
+    71% {
+      transform: translate(-94px, -32px) scaleX(1.07);
+    }
+    85% {
+      transform: translate(-111px, -22px) scaleX(1.05);
+    }
+    100% {
+      transform: translate(-125px, -9px) scaleX(1);
+    }
+  }
+  
+  @keyframes animloader1 {
+    0% {
+      box-shadow: 0 -6px, -122.9px -8px;
+    }
+    25%, 75% {
+      box-shadow: 0 0px, -122.9px -8px;
+    }
+    100% {
+      box-shadow: 0 0px, -122.9px -16px;
+    }
+  }
+/* navbar */
+.navbar-brand div{
+    vertical-align: middle;
+}
+.navbar-brand small{
+    font-size: 10px;
+}
+@media (min-width: 992px) { 
+    .nav-link{
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        border-radius: 20px;
+        border: 2px solid transparent !important;
+    }
+    .nav-link:hover{
+        color: var(--color-2) !important;
+        border-color: var(--color-2) !important;
+    }
+    nav.navbar .active{
+        color: var(--color-2) !important;
+        border-color: var(--color-2) !important;
+    }
+}
+.navbar-toggler-icon{
+    background-image: none;
+}
+.navbar-toggler-icon:hover i{
+    color: var(--color-2) !important;
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: 2px solid var(--color-2);
+}
+
+ @media (max-width: 992px){
+    .navbar-collapse{
+    background-color: var(--color-3);
+    margin-top: 20px;
+ }
+ .nav-link{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid black;
+ }
+ nav.navbar .active{
+    color: var(--color-2) !important;
+ }
+}
+/* find city */
+.find-city{
+    height: 300px;
+    background-image: url(../images/svg1.png);
+    background-position: center;
+}
+
+input:focus-visible{
+    outline: none;
+}
+.find-city form button{
+    top: 0;
+    right: 10px;
+    transform: translateY(-100%);
+}
+.subcribe form button{
+    top: 0;
+    right: 20px;
+    transform: translateY(-100%);
+}
+/* weather */
+.weather .row{
+    position: relative;
+    top: -50px;
+}
+#this-day h6,#last-day h6{
+    background-color:#2D303D ;
+    color: #BFC1C8;
+}
+.weather .day-body{
+    background-color: #323544;
+}
+.day-body .sky{
+    color: var(--color-2);
+}
+.day-body p,.day-body span{
+    color: #BFC1C8;
+}
+#second-day h6{
+    background-color: #222530;
+    color: #BFC1C8;
+}
+#second-day .h-100{
+    background-color: #262936;
+}
+#second-day .day-body{
+    background-color: #262936;
+}
+#last-day .h-100{
+    background-color: #323544;
+}
+/* subscribe */
+.subcribe i{
+    transition: 0.3s;
+}
+.subcribe i:hover{
+    background-color: var(--color-2) !important;
+    color: white !important;
+}
+/* contact */
+.inner{
+  height: 300px;
+}
+.inner div p {
+  color: #BFC1C8;
+  font-size: 14px;
+}
+.inner div span{
+  color: #BFC1C8;
+  font-size: 14px;
+}
+.sign-up p{
+  color: #BFC1C8;
+}
+.sign-up form input,.sign-up form textarea{
+  border: 2px solid var(--color-3);
+}
+.sign-up form textarea:focus-visible{
+  outline: none;
+}
+.sign-up form input:focus-visible,
+.sign-up form textarea:focus{
+  border-color: var(--color-2) ;
+}
+.sign-up form textarea{
+  min-height: 150px;
+}
