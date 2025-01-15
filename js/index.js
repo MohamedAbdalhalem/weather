@@ -11,46 +11,10 @@ const temperaturePm = document.querySelectorAll(".temperature-pm");
 const findLocation = document.querySelector("#location");
 const forms = document.querySelectorAll("form");
 const home = document.querySelector(".home");
-const contact = document.querySelector("#Cont");
-const louding = document.querySelector("#louding")
 
-contact.addEventListener("click", () => {
-    home.innerHTML= `<div class="container px-100 py-4">
-  <div class="bg-second mb-5 mt-2 text-white py-3 px-4 rounded-5">home <i class="fa-solid fa-right-long mx-2"></i> Contact</div>
-  <div class="row gy-4">
-    <div class="col-lg-5">
-      <div class="inner shadow-sm rounded-5 ps-3 pb-3 bg-second flex-wrap d-flex align-content-end">
-       <div class="d-flex w-100 align-items-baseline">
-         <i class="fa-solid fa-location-dot text-three me-3"></i>
-         <p class="mt-0">Company Name INC. <br>
-           2803 Avenue Street, Los Angeles</p>
-       </div>
-       <div>
-        <span class="me-3"><i class="fa-solid fa-phone-volume text-three me-2"></i>+1 800 314 235</span>
-         <span><i class="fa-solid fa-envelope text-three me-2"></i>contact@companyname.com</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 offset-lg-1">
-      <div class="sign-up">
-        <h2 class="text-white me-3">Contact us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
-        <form>
-          <div class="row gx-3 gy-3">
-           <div class="col-lg-6"><input type="text" class="w-100 bg-one rounded-5 py-2 px-4 text-white" placeholder="Your Name..."></div>
-           <div class="col-lg-6"><input type="text" class="w-100 bg-one rounded-5 py-2 px-4 text-white" placeholder="Your Email..."></div>
-           <div class="col-lg-6"><input type="text" class="w-100 bg-one rounded-5 py-2 px-4 text-white" placeholder="Company Name..."></div>
-           <div class="col-lg-6"><input type="text" class="w-100 bg-one rounded-5 py-2 px-4 text-white" placeholder="Website..."></div>
-           <div><textarea class="w-100 bg-one rounded-5 py-2 px-4 text-white" placeholder="Massage..."></textarea></div>
-          </div>
-          <button class="bg-three border-0 py-2 px-4 text-white rounded-5 shadow-sm ms-auto d-block mt-2">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>`
-    home.id = "contact"
-})
+
+
+
 
 for (var i = 0; i < forms.length; i++){
     forms[i].addEventListener("submit", (e) => {
@@ -65,14 +29,13 @@ findLocation.addEventListener("keyup", () => {
 
 let weather = {};
 async function getWeather(c) {
-    louding.classList.remove("d-none");
     let req = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=36f8b24dc0d54e2baa6135358241312&q=${c}&days=3`);
     let response = await req.json();
     weather = response
     currentDay(); 
     secodDay();
     thirdDay()
-    louding.classList.add("d-none");
+   
 }
 
 function getDayFromDate(dateString) {
